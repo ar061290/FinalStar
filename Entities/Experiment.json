@@ -1,0 +1,32 @@
+{
+  "name": "Experiment",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the experiment"
+    },
+    "workspace_state": {
+      "type": "object",
+      "description": "Complete workspace state including apparatus and chemicals",
+      "properties": {
+        "apparatus": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "zoom_level": {
+          "type": "number"
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "User notes about the experiment"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

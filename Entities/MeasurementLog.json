@@ -1,0 +1,43 @@
+{
+  "name": "MeasurementLog",
+  "type": "object",
+  "properties": {
+    "experiment_id": {
+      "type": "string",
+      "description": "ID of the experiment this measurement belongs to"
+    },
+    "apparatus_id": {
+      "type": "string",
+      "description": "ID of the apparatus measured"
+    },
+    "measurement_type": {
+      "type": "string",
+      "enum": [
+        "pH",
+        "temperature",
+        "conductivity",
+        "volume",
+        "mass"
+      ],
+      "description": "Type of measurement"
+    },
+    "value": {
+      "type": "number",
+      "description": "Measured value"
+    },
+    "unit": {
+      "type": "string",
+      "description": "Unit of measurement"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the measurement was taken"
+    }
+  },
+  "required": [
+    "measurement_type",
+    "value",
+    "unit"
+  ]
+}
